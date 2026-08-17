@@ -1,96 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TradeEdge - Trading Work Opportunity</title>
-
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','1382090940567481');
-fbq('track','PageView');
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1382090940567481&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel -->
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030911">
+<title>TradeEdge — Market Insights</title>
 <style>
-*{
-  box-sizing:border-box;
-}
-
-html,body{
-  margin:0;
-  padding:0;
-  background:#050b14;
-}
-
-.page{
-  width:100%;
-  max-width:1024px;
-  margin:auto;
-  position:relative;
-  line-height:0;
-}
-
-.page img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* Telegram button area on the image */
-.telegram-link{
-  position:absolute;
-  left:7%;
-  width:86%;
-  top:76%;
-  height:7%;
-  display:block;
-  border-radius:60px;
-  z-index:5;
-  -webkit-tap-highlight-color:transparent;
-}
-
-.telegram-link:active{
-  opacity:.85;
-}
-
-@media(max-width:700px){
-  .telegram-link{
-    top:76%;
-    height:7%;
-  }
-}
+:root{--bg:#020810;--panel:#07131e;--line:#1d3b4d;--green:#00e895;--muted:#aebbc7}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 70% 10%,#06352c 0,#020810 34%,#01050a 100%);color:#f7fbff;font-family:Inter,Arial,sans-serif}
+.wrap{width:min(1120px,94%);margin:auto;padding:18px 0 40px}
+.site{overflow:hidden;border:1px solid #173547;border-radius:26px;background:#030b13;box-shadow:0 25px 80px #0009}
+.hero{position:relative}
+.hero img{width:100%;display:block}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#00000005 45%,#030b13 100%);pointer-events:none}
+.nav{position:absolute;z-index:2;top:18px;left:24px;right:24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:clamp(22px,4vw,34px);font-weight:900;letter-spacing:-1px}
+.logo span{color:var(--green)}
+.navbtn{border:1px solid var(--green);border-radius:30px;padding:10px 16px;color:#fff;text-decoration:none;background:#03130ddd;font-weight:800}
+.content{padding:34px clamp(18px,5vw,55px) 45px;text-align:center}
+.eyebrow{display:inline-flex;gap:10px;padding:9px 16px;border:1px solid #00e89555;border-radius:30px;color:#d8fff1;background:#031a14}
+.dot{color:var(--green)}
+h1{font-size:clamp(38px,7vw,72px);line-height:.98;margin:22px 0 16px;letter-spacing:-2px}
+.green{color:var(--green)}
+.lead{max-width:760px;margin:auto;color:#c4ced7;font-size:clamp(17px,2.2vw,22px);line-height:1.55}
+.cta{display:block;max-width:760px;margin:28px auto 12px;padding:20px;border-radius:60px;background:linear-gradient(90deg,#00d98a,#14ef99);color:#00130b;text-decoration:none;font-weight:900;font-size:clamp(18px,3vw,26px);box-shadow:0 0 38px #00e8953d;transition:.2s}
+.cta:active{transform:scale(.98)}
+.micro{color:#91a0ad;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.card{padding:22px 15px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#0a1925,#06111a);min-height:145px}
+.icon{font-size:30px}.card b{display:block;font-size:18px;margin:10px 0 7px}.card span{color:var(--muted);line-height:1.45;font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:16px;border:1px solid var(--line);border-radius:18px;background:#07131e;padding:18px}
+.stat b{display:block;font-size:30px;color:var(--green)}.stat span{color:#9eabb7;font-size:14px}
+.count{margin:25px auto 0;max-width:780px;padding:20px;border:1px solid #00e89577;border-radius:20px;background:linear-gradient(180deg,#062017,#04120f)}
+.count-title{font-weight:800;color:#dce9e5}.timer{font-size:58px;font-weight:900;color:var(--green);letter-spacing:3px;margin:4px 0}.count-note{color:#9fb1ad;font-size:14px}
+.notice{margin:20px auto 0;max-width:900px;border:1px solid #263b4c;border-radius:14px;padding:15px;color:#aebbc7;font-size:13px;line-height:1.5}
+.footer{margin-top:22px;color:#71808d;font-size:12px}
+@media(max-width:760px){.cards{grid-template-columns:1fr 1fr}.nav{top:12px;left:14px;right:14px}.navbtn{padding:8px 11px;font-size:13px}}
+@media(max-width:460px){.cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}.stat b{font-size:23px}}
 </style>
 </head>
-
 <body>
+<div class="wrap"><div class="site">
 
-<div class="page">
+<header class="hero">
+  <img src="hero.png" alt="TradeEdge market insights">
+  <nav class="nav">
+    <div class="logo">Trade<span>Edge</span></div>
+    <a class="navbtn" href="https://t.me/rahulguide" target="_blank" rel="noopener">✈ Join Telegram</a>
+  </nav>
+</header>
 
-  <img src="landing.png" alt="TradeEdge Trading Work Opportunity">
+<main class="content">
+  <div class="eyebrow"><span class="dot">●</span> LIVE CHANNEL UPDATES <span class="dot">●</span> MARKET INSIGHTS</div>
 
-  <a
-    class="telegram-link"
-    href="https://t.me/rahulguide"
-    onclick="fbq('track','Lead');"
-    aria-label="Join our Telegram Channel">
-  </a>
+  <h1>Trade Smarter,<br><span class="green">Grow With Knowledge</span></h1>
+  <p class="lead">Market-focused updates, educational trading ideas and a community built for people who want to keep learning.</p>
 
-</div>
+  <a class="cta" href="https://t.me/rahulguide" target="_blank" rel="noopener">✈️ JOIN TELEGRAM NOW →</a>
+  <div class="micro">Free to join • Tap anytime • No automatic redirect</div>
 
+  <section class="cards">
+    <div class="card"><div class="icon">📊</div><b>Market Analysis</b><span>Regular market-focused observations and updates.</span></div>
+    <div class="card"><div class="icon">🎓</div><b>Trading Education</b><span>Learn concepts, setups and risk-awareness basics.</span></div>
+    <div class="card"><div class="icon">🔔</div><b>Channel Alerts</b><span>Get notified when fresh posts and updates arrive.</span></div>
+    <div class="card"><div class="icon">🛡️</div><b>Risk Aware</b><span>Clear messaging that trading always involves risk.</span></div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><b>5K+</b><span>Community members</span></div>
+    <div class="stat"><b>100%</b><span>Free to join</span></div>
+    <div class="stat"><b>24/7</b><span>Channel availability</span></div>
+  </section>
+
+  <section class="count" aria-live="polite">
+    <div class="count-title" id="countTitle">Next update timer</div>
+    <div class="timer" id="timer">10</div>
+    <div class="count-note" id="countNote">This timer is informational. It never controls the Telegram button.</div>
+  </section>
+
+  <div class="notice">Trading involves financial risk. Information on this page is educational and not a guarantee of earnings or results. Do your own research before making financial decisions.</div>
+  <div class="footer">© 2026 TradeEdge • Market insights & community updates</div>
+</main>
+</div></div>
+
+<script>
+let seconds=10;
+const timer=document.getElementById('timer');
+const title=document.getElementById('countTitle');
+const note=document.getElementById('countNote');
+
+const countdown=setInterval(()=>{
+  seconds--;
+  timer.textContent=String(Math.max(seconds,0)).padStart(2,'0');
+  if(seconds<=0){
+    clearInterval(countdown);
+    title.textContent='Update ready';
+    timer.textContent='✓';
+    note.textContent='The Telegram button remains available at all times.';
+  }
+},1000);
+</script>
 </body>
 </html>
