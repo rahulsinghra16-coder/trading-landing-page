@@ -1,97 +1,96 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TradeEdge - Trading Work Opportunity</title>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1382090940567481');
-fbq('track', 'PageView');
+fbq('init','1382090940567481');
+fbq('track','PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1382090940567481&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- End Meta Pixel -->
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
 html,body{
   margin:0;
   padding:0;
   background:#050b14;
 }
+
 .page{
   width:100%;
   max-width:1024px;
-  margin:0 auto;
+  margin:auto;
   position:relative;
   line-height:0;
 }
+
 .page img{
   width:100%;
   height:auto;
   display:block;
 }
+
+/* Telegram button area on the image */
 .telegram-link{
   position:absolute;
-  left:7.2%;
-  width:85.5%;
-  top:76.0%;
-  height:5.9%;
+  left:7%;
+  width:86%;
+  top:76%;
+  height:7%;
   display:block;
   border-radius:60px;
   z-index:5;
   -webkit-tap-highlight-color:transparent;
 }
-.telegram-link:focus{
-  outline:2px solid #00e59a;
-  outline-offset:4px;
+
+.telegram-link:active{
+  opacity:.85;
 }
-.notice{
-  position:fixed;
-  left:50%;
-  bottom:12px;
-  transform:translateX(-50%);
-  background:#07131fdd;
-  color:#9fb0bf;
-  border:1px solid #263747;
-  border-radius:12px;
-  padding:8px 12px;
-  font:12px Arial,sans-serif;
-  z-index:10;
-  display:none;
-}
-@media(min-width:700px){
-  .notice{display:block}
+
+@media(max-width:700px){
+  .telegram-link{
+    top:76%;
+    height:7%;
+  }
 }
 </style>
 </head>
 
 <body>
-<main class="page">
-  <img src="landing-page.png"
-       alt="TradeEdge trading work opportunity landing page">
 
-  <a class="telegram-link"
-     href="https://t.me/rahulguide"
-     aria-label="Join our Telegram channel"
-     onclick="fbq('track','Lead');">
+<div class="page">
+
+  <img src="landing.png" alt="TradeEdge Trading Work Opportunity">
+
+  <a
+    class="telegram-link"
+    href="https://t.me/rahulguide"
+    onclick="fbq('track','Lead');"
+    aria-label="Join our Telegram Channel">
   </a>
-</main>
 
-<div class="notice">Tap the green Telegram button to join</div>
+</div>
+
 </body>
 </html>
